@@ -1,0 +1,94 @@
+@baseUrl = http://localhost:5285
+
+###
+GET {{baseUrl}}/api/products
+
+###
+GET {{baseUrl}}/api/products/3
+
+###
+GET {{baseUrl}}/api/products/999
+
+###
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Parlante portátil",
+  "price": 15999.99
+}
+
+###
+GET {{baseUrl}}/api/products
+
+###
+PUT {{baseUrl}}/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Mouse inalámbrico Logitech",
+  "price": 4599.99
+}
+
+###
+PUT {{baseUrl}}/api/products/999
+Content-Type: application/json
+
+{
+  "name": "No existe",
+  "price": 100
+}
+
+###
+DELETE {{baseUrl}}/api/products/2
+
+###
+DELETE {{baseUrl}}/api/products/2
+
+###
+GET {{baseUrl}}/api/products/search?name=teclado
+
+###
+GET {{baseUrl}}/api/products/search?name=TECLADO
+
+###
+GET {{baseUrl}}/api/products/search?name=heladera
+
+###
+GET {{baseUrl}}/api/products/stats
+
+###
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+  "name": "",
+  "price": 100
+}
+
+###
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Webcam HD",
+  "price": 5000
+}
+
+###
+PUT {{baseUrl}}/api/products/3
+Content-Type: application/json
+
+{
+  "name": "webcam hd",
+  "price": 50000
+}
+
+###
+PUT {{baseUrl}}/api/products/6
+Content-Type: application/json
+
+{
+  "name": "Webcam HD",
+  "price": 8500
+}
